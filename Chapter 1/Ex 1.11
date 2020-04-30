@@ -1,0 +1,13 @@
+public class CodingExam {
+	public static void main (String[] args) {
+		double birthInAYear = (60.0/7)*60*24*365;
+		double deathInAYear = (60.0/13)*60*24*365;
+		double immigrantInAYear = (60.0/45)*60*24*365;
+		double population = 312032486;
+		
+		for (int i = 0; i < 5; i++) {
+			population += birthInAYear - deathInAYear + immigrantInAYear;
+			System.out.println(String.format("Year %d: Population is %d", i + 1, (int)population));	
+		}
+	}
+}
