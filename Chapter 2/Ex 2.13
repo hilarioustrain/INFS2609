@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class CodingExam {
+	public static void main (String[] args) {
+		Scanner userInput = new Scanner(System.in);
+		System.out.print("Enter the monthly saving amount: ");
+		int saving = userInput.nextInt();
+		double interestRate = 1 + 0.003125;
+		double accountValue = saving * interestRate;
+		System.out.println("After the first month, the account value is " + accountValue);
+		accountValue = (saving + accountValue) * interestRate;
+		System.out.println("After the second month, the account value is " + accountValue);
+		accountValue = (saving + accountValue) * interestRate;
+		System.out.println("After the third month, the account value is " + accountValue);
+		accountValue = (saving + accountValue) * interestRate;
+		accountValue = (saving + accountValue) * interestRate;
+		accountValue = (saving + accountValue) * interestRate;
+		System.out.println("After the six month, the account value is " + accountValue);
+	}
+}
