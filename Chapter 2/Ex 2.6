@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class CodingExam {
+	public static void main (String[] args) {
+		Scanner userInput = new Scanner(System.in);
+		System.out.print("Enter a number between 0 and 1000: ");
+		int number = userInput.nextInt();
+		int multiplicationTotal;
+		
+		if (number / 10 == 0) {
+			System.out.println(String.format("The multiplication of all digits in %d is %d", number, number));
+		} else if (number / 10 > 0 &&  number / 10 < 10) {
+			multiplicationTotal = (number / 10) * (number % 10);
+			System.out.println(String.format("The multiplication of all digits in %d is %d", number, multiplicationTotal));
+		} else {
+			multiplicationTotal = (number / 100) * (number / 10 - (number / 100)*10) * (number % 10);
+			System.out.println(String.format("The multiplication of all digits in %d is %d", number, multiplicationTotal));
+		}
+	}
+}
