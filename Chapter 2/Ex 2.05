@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class CodingExam {
+	public static void main (String[] args) {
+		Scanner userInput = new Scanner(System.in);
+		
+		System.out.print("Enter the subtotal and a gratuity rate: ");
+		double subtotal = userInput.nextDouble();
+		double gratuity = userInput.nextDouble();
+		double gratuityRate = subtotal * gratuity/100;
+		
+		System.out.println("The gratuity is $" + gratuityRate + " and the total is $" + (subtotal + gratuityRate));
+	}
+}
