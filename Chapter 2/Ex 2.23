@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class CodingExam {
+	public static void main (String[] args) {
+		Scanner userInput = new Scanner(System.in);
+		System.out.print("Enter the driving distance: ");
+		float drivingDistance = userInput.nextFloat();
+		System.out.print("Enter miles per gallon: ");
+		float miles = userInput.nextFloat();
+		System.out.print("Enter the price per gallon: ");
+		float price = userInput.nextFloat();
+		float cost = drivingDistance / miles * price;
+		
+		System.out.println(String.format("The cost of driving is %.2f", cost));
+		
+	}
+}
