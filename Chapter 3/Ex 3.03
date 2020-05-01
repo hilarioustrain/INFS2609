@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class CodingExam {
+	public static void main (String[] args) {
+		Scanner userInput = new Scanner(System.in);
+		System.out.print("Enter a, b, c, d, e, f: ");
+		float a = userInput.nextFloat();
+		float b = userInput.nextFloat();
+		float c = userInput.nextFloat();
+		float d = userInput.nextFloat();
+		float e = userInput.nextFloat();
+		float f = userInput.nextFloat();
+		float x = (e * d - b * f) / (a * d - b * c);
+		float y = (a * f - e * c) / (a * d - b *c);
+		if (a * d - b * c == 0) {
+			System.out.println("The equation has no solution");
+		} else {
+			System.out.println(String.format("x is %.1f and y is %.1f", x, y));
+		}
+	}
+}
