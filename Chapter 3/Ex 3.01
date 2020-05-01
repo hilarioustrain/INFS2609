@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class CodingExam {
+	public static void main (String[] args) {
+		Scanner userInput = new Scanner(System.in);
+		System.out.print("Enter a, b, c: ");
+		float a = userInput.nextFloat();
+		float b = userInput.nextFloat();
+		float c = userInput.nextFloat();
+		double discriminant = Math.pow(b, 2) - 4 * a * c;
+		double r1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+		double r2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+		if (discriminant > 0) {
+			System.out.println(String.format("The equation has two roots %f and %f", r1, r2));
+		} else if (discriminant == 0) {
+			System.out.println(String.format("The equation has one root %f", r1));
+		} else {
+			System.out.println("The equation has no real roots");
+		}
+	}
+}
