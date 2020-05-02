@@ -5,7 +5,7 @@ public class CodingExam {
 		System.out.print("scissor (0), rock (1), paper (2): ");
 		Scanner userInput = new Scanner(System.in);
 		int user = userInput.nextInt();
-		int computer = (int)(Math.random() * (2));
+		int computer = (int)(Math.random() * (3));
 		
 		if (user == 0) {
 			if (computer == 0) {
